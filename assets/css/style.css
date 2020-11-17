@@ -591,12 +591,12 @@ section {
 }
 
 .chapter-title h2 {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   position: relative;
   color: #37517e;
 }
@@ -624,12 +624,12 @@ section {
 }
 
 .chapter-title h3 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
   position: relative;
   color: #37517e;
 }
@@ -923,8 +923,8 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  margin: 15px;
+  padding: 20px 10px;
+  margin: 5px;
   transition: all ease-in-out 0.4s;
   background: #fff;
 }
@@ -1645,7 +1645,7 @@ section {
 # Chapter Number
 --------------------------------------------------------------*/
 .chapterNum {
-  padding: 15px 0;
+  padding: 5px 0;
   background: #f3f5fa;
   min-height: 20px;
   margin-top: 0px;
@@ -1653,12 +1653,12 @@ section {
 
 @media (max-width: 992px) {
   .chapterNum {
-    margin-top: 68px;
+    margin-top: 48px;
   }
 }
 
 .chapterNum h2 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
   color: #37517e;
 }
@@ -1685,6 +1685,23 @@ section {
 }
 
 
+/*--------------------------------------------------------------
+# Shlokas and meanings
+--------------------------------------------------------------*/
+
+.shlokaText {
+	font-size: 18px;
+	font-weight:bold;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.meaningText {
+	font-size: 18px;
+	font-weight:normal;
+	text-align: left;
+	padding-bottom: 0px;
+}
 
 /*--------------------------------------------------------------
 # Portfolio Details
