@@ -1639,6 +1639,53 @@ section {
   content: "/";
 }
 
+
+
+/*--------------------------------------------------------------
+# Chapter Number
+--------------------------------------------------------------*/
+.chapterNum {
+  padding: 15px 0;
+  background: #f3f5fa;
+  min-height: 20px;
+  margin-top: 0px;
+}
+
+@media (max-width: 992px) {
+  .chapterNum {
+    margin-top: 68px;
+  }
+}
+
+.chapterNum h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #37517e;
+}
+
+
+.chapterNum ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.chapterNum ol li + li {
+  padding-left: 10px;
+}
+
+.chapterNum ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #4668a2;
+  content: " ";
+}
+
+
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/

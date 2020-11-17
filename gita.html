@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Bhagvad Gita</title>
+  <title>Bhagavad Gita</title>
   <meta content="" name="description">
   <meta content="" name="Bhagvad Gita Geeta भगवद् गीता ">
 
@@ -34,6 +34,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
+  
 </head>
 
 <body>
@@ -51,7 +53,7 @@
           <li><a href="index.html">Home</a></li>
           <!-- <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li> -->
-          <li class="active">Gita</a></li>
+          <li class="active"><a href="#">Gita</a></li>
           <!-- <li><a href="#team">Team</a></li>
            <li class="drop-down"><a href="">Drop Down</a>
             <ul>
@@ -90,11 +92,61 @@
           <li><a href="index.html">Home</a></li>
           <li>Gita</li>
         </ol>
-        <h2>Bhagvad Gita</h2>
+        <h2>Bhagvad Gita Chapter</h2>
+		<ol>
+          <li><a class="chSelect" id="1" href="#">1</a></li>
+          <li><a class="chSelect" id="2" href="#">2</a></li>
+		  <li><a class="chSelect" id="3" href="#">3</a></li>
+		  <li><a class="chSelect" id="4" href="#">4</a></li>
+		  <li><a class="chSelect" id="5" href="#">5</a></li>
+		  <li><a class="chSelect" id="6" href="#">6</a></li>
+		  <li><a class="chSelect" id="7" href="#">7</a></li>
+		  <li><a class="chSelect" id="8" href="#">8</a></li>
+		  <li><a class="chSelect" id="9" href="#">9</a></li>
+		  <li><a class="chSelect" id="10" href="#">10</a></li>
+		  <li><a class="chSelect" id="11" href="#">11</a></li>
+		  <li><a class="chSelect" id="12" href="#">12</a></li>
+		  <li><a class="chSelect" id="13" href="#">13</a></li>
+		  <li><a class="chSelect" id="14" href="#">14</a></li>
+		  <li><a class="chSelect" id="15" href="#">15</a></li>
+		  <li><a class="chSelect" id="16" href="#">16</a></li>
+		  <li><a class="chSelect" id="17" href="#">17</a></li>
+		  <li><a class="chSelect" id="18" href="#">18</a></li>
+		  <li><a class="allSelect" id="All" href="#">All</a></li>
+        </ol>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
+	    <!-- ======= Chapter Num Section  ======= -->
+    <!-- <section id="chapterNum" class="chapterNum">
+      <div class="container">
+	  <ol>
+          <li><a href="index.html">1</a></li>
+          <li>2</li>
+		  <li>3</li>
+		  <li>4</li>
+		  <li>5</li>
+		  <li>6</li>
+		  <li>7</li>
+		  <li>8</li>
+		  <li>9</li>
+		  <li>10</li>
+		  <li>11</li>
+		  <li>12</li>
+		  <li>13</li>
+		  <li>14</li>
+		  <li>15</li>
+		  <li>16</li>
+		  <li>17</li>
+		  <li>18</li>
+        </ol>
+        
+
+      </div>
+    </section> --> <!-- End Breadcrumbs -->
+	
+	
 	 <!-- ======= Bhagvad Gita Section ======= -->
 	<section id="portfolio-details" class="portfolio-details">
       <div class="container">
@@ -8906,6 +8958,70 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+
+        // Wait for the page to load first
+        // window.onload = function() {
+
+
+        //  var a = document.getElementById("ch2");
+
+          //Set code to run when the link is clicked
+          // by assigning a function to "onclick"
+        //  a.onclick = function() {
+		//	var chapter = document.getElementById("chapter_2");
+		//	chapter.classList.add("visible");
+            // Your code here...
+
+            //If you don't want the link to actually 
+            // redirect the browser to another page,
+            // "google.com" in our example here, then
+            // return false at the end of this block.
+            // Note that this also prevents event bubbling,
+            // which is probably what we want here, but won't 
+            // always be the case.
+         //   return false;
+         // }
+        //}
+		$(document).ready(function(){
+			$(".chSelect").on("click", function(e) {
+				// Use `this` here
+				e.preventDefault();
+				var chNum = $(this).attr('id')
+				//alert("Btn clicked:" + chNum)
+				var i;
+				for (i = 1; i < 19; i++) {
+				  var chSelector = "chapter_" + i
+				  //var elem = $('#'+chSelector)
+				  console.log(chSelector);
+				  var elem = document.getElementById(chSelector);
+				  if(i == chNum) {
+					console.log("selected ch addClass");
+					elem.classList.add("visible");
+				  }else {
+					elem.classList.remove("visible");
+					elem.classList.add("hidden");
+				  }
+				}
+				
+			});
+			
+			$(".allSelect").on("click", function(e) {
+				e.preventDefault();
+				for (i = 1; i < 19; i++) {
+				  var chSelector = "chapter_" + i
+				  //var elem = $('#'+chSelector)
+				  console.log(chSelector);
+				  var elem = document.getElementById(chSelector);
+				  
+					elem.classList.remove("hidden");
+					elem.classList.add("visible");
+				  
+				}
+			});
+		});
+    </script>
+  
 
 </body>
 
